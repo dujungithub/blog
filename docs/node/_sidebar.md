@@ -1,0 +1,25 @@
+<!-- 资源配置页面 -->
+* [< 返回首页](README.md)
+<!-- * [< 返回首页]() -->
+<!-- * [开发笔记](node/README.md) -->
+* [bookmarks_2019_3_1](node/bookmarks_2019_3_1)
+* [python学习笔记](node/python学习笔记)
+* [cordova开发笔记](node/cordova开发笔记)
+* [微信小程序插件-日历](node/微信小程序插件-日历)
+* [微信JSSDK-html实现](node/微信JSSDK-html实现)
+* [小程序开发过程问题记录](node/小程序开发过程问题记录)
+* [小程序兑奖流程图](node/小程序兑奖流程图)
+
+* [反编译小程序步骤](node/反编译小程序步骤)
+* [扒代码小程序源代码](node/扒代码小程序源代码)
+* [图像识别--开发日志-快三开奖号](node/图像识别--开发日志-快三开奖号)
+* [跳一跳状态](node/跳一跳状态)
+* [高德地图](node/高德地图)
+* [高德地图开发注意](node/高德地图开发注意)
+* [高德地图API](node/高德地图API)
+* [百度地图API](node/百度地图API)
+* [X-Build-h5场景快速开发搭建](node/X-Build-h5场景快速开发搭建)
+* [html-map热区](node/html-map热区)
+* [vue启动](node/vue启动)
+* [vue总结](node/vue总结)
+* [各媒体开奖直播监控页面](node/各媒体开奖直播监控页面)
