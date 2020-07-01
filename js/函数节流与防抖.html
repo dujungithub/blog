@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>函数防抖和节流 | Du-vLog</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="icon" href="https://vuepress.docschina.org/logo.png">
+    <meta name="description" content="Vuepress-dujun">
+    <link rel="preload" href="/blog/assets/css/0.styles.c1dd5107.css" as="style"><link rel="preload" href="/blog/assets/js/app.d88631dc.js" as="script"><link rel="preload" href="/blog/assets/js/2.e4956d1c.js" as="script"><link rel="preload" href="/blog/assets/js/13.a003a8c4.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.24a542f9.js"><link rel="prefetch" href="/blog/assets/js/11.8dd5a1bc.js"><link rel="prefetch" href="/blog/assets/js/12.5cc26a0a.js"><link rel="prefetch" href="/blog/assets/js/14.8ecd9e01.js"><link rel="prefetch" href="/blog/assets/js/15.b2e8507c.js"><link rel="prefetch" href="/blog/assets/js/16.a863b876.js"><link rel="prefetch" href="/blog/assets/js/17.364aae04.js"><link rel="prefetch" href="/blog/assets/js/18.ae97b640.js"><link rel="prefetch" href="/blog/assets/js/19.1cf08cbe.js"><link rel="prefetch" href="/blog/assets/js/20.495a7128.js"><link rel="prefetch" href="/blog/assets/js/21.bc11cece.js"><link rel="prefetch" href="/blog/assets/js/22.da4d3066.js"><link rel="prefetch" href="/blog/assets/js/23.c5bda694.js"><link rel="prefetch" href="/blog/assets/js/24.e28e6242.js"><link rel="prefetch" href="/blog/assets/js/25.5d3e2dcd.js"><link rel="prefetch" href="/blog/assets/js/26.2e2b3b76.js"><link rel="prefetch" href="/blog/assets/js/27.e9410193.js"><link rel="prefetch" href="/blog/assets/js/28.e28417e4.js"><link rel="prefetch" href="/blog/assets/js/29.bed898ff.js"><link rel="prefetch" href="/blog/assets/js/3.356e154a.js"><link rel="prefetch" href="/blog/assets/js/30.c33bc347.js"><link rel="prefetch" href="/blog/assets/js/31.b1d6873b.js"><link rel="prefetch" href="/blog/assets/js/32.a4cf73d0.js"><link rel="prefetch" href="/blog/assets/js/33.3b77390c.js"><link rel="prefetch" href="/blog/assets/js/34.0926faf9.js"><link rel="prefetch" href="/blog/assets/js/35.1a099c22.js"><link rel="prefetch" href="/blog/assets/js/36.fa74fd96.js"><link rel="prefetch" href="/blog/assets/js/37.7dda1e9b.js"><link rel="prefetch" href="/blog/assets/js/38.71504691.js"><link rel="prefetch" href="/blog/assets/js/39.7d79f540.js"><link rel="prefetch" href="/blog/assets/js/4.f1ac2cad.js"><link rel="prefetch" href="/blog/assets/js/40.bc3a9b30.js"><link rel="prefetch" href="/blog/assets/js/41.bc9ebcb7.js"><link rel="prefetch" href="/blog/assets/js/42.22a38263.js"><link rel="prefetch" href="/blog/assets/js/43.412df995.js"><link rel="prefetch" href="/blog/assets/js/44.a3c1ab51.js"><link rel="prefetch" href="/blog/assets/js/45.d2c7e7c1.js"><link rel="prefetch" href="/blog/assets/js/46.91cea4ef.js"><link rel="prefetch" href="/blog/assets/js/47.f11819dd.js"><link rel="prefetch" href="/blog/assets/js/48.066f1282.js"><link rel="prefetch" href="/blog/assets/js/49.abb05517.js"><link rel="prefetch" href="/blog/assets/js/5.887bccd9.js"><link rel="prefetch" href="/blog/assets/js/50.e66d339d.js"><link rel="prefetch" href="/blog/assets/js/51.07430709.js"><link rel="prefetch" href="/blog/assets/js/52.d0702da0.js"><link rel="prefetch" href="/blog/assets/js/53.10a39a41.js"><link rel="prefetch" href="/blog/assets/js/54.c0600b00.js"><link rel="prefetch" href="/blog/assets/js/55.7cc7adb1.js"><link rel="prefetch" href="/blog/assets/js/56.4b9bf38d.js"><link rel="prefetch" href="/blog/assets/js/57.3c7c8110.js"><link rel="prefetch" href="/blog/assets/js/58.50ec2121.js"><link rel="prefetch" href="/blog/assets/js/59.9b2827f9.js"><link rel="prefetch" href="/blog/assets/js/6.601d64de.js"><link rel="prefetch" href="/blog/assets/js/60.2247cbaf.js"><link rel="prefetch" href="/blog/assets/js/61.70535746.js"><link rel="prefetch" href="/blog/assets/js/62.a2d92824.js"><link rel="prefetch" href="/blog/assets/js/63.c418297d.js"><link rel="prefetch" href="/blog/assets/js/64.5aaf7c7a.js"><link rel="prefetch" href="/blog/assets/js/65.c44ab819.js"><link rel="prefetch" href="/blog/assets/js/66.3a3abd27.js"><link rel="prefetch" href="/blog/assets/js/67.c807191f.js"><link rel="prefetch" href="/blog/assets/js/68.ab5ff6c0.js"><link rel="prefetch" href="/blog/assets/js/69.9837c21b.js"><link rel="prefetch" href="/blog/assets/js/7.daedb2f0.js"><link rel="prefetch" href="/blog/assets/js/70.366bd1e1.js"><link rel="prefetch" href="/blog/assets/js/71.85a58da3.js"><link rel="prefetch" href="/blog/assets/js/72.1e2ff1ae.js"><link rel="prefetch" href="/blog/assets/js/73.ae4bdda4.js"><link rel="prefetch" href="/blog/assets/js/74.2dff9b35.js"><link rel="prefetch" href="/blog/assets/js/75.12a0f449.js"><link rel="prefetch" href="/blog/assets/js/76.c507e9c2.js"><link rel="prefetch" href="/blog/assets/js/77.e97c5ee8.js"><link rel="prefetch" href="/blog/assets/js/78.a388117c.js"><link rel="prefetch" href="/blog/assets/js/79.67a72465.js"><link rel="prefetch" href="/blog/assets/js/8.61f25c23.js"><link rel="prefetch" href="/blog/assets/js/80.ba30c1e0.js"><link rel="prefetch" href="/blog/assets/js/81.20dfd18c.js"><link rel="prefetch" href="/blog/assets/js/82.e0d24383.js"><link rel="prefetch" href="/blog/assets/js/83.b59c9bf4.js"><link rel="prefetch" href="/blog/assets/js/84.5e059740.js"><link rel="prefetch" href="/blog/assets/js/85.f987e24c.js"><link rel="prefetch" href="/blog/assets/js/86.1b82c59d.js"><link rel="prefetch" href="/blog/assets/js/87.c1b4ceed.js"><link rel="prefetch" href="/blog/assets/js/88.f3eee2a1.js"><link rel="prefetch" href="/blog/assets/js/89.d8805fd9.js"><link rel="prefetch" href="/blog/assets/js/9.7ad335d2.js"><link rel="prefetch" href="/blog/assets/js/90.49bfeb52.js"><link rel="prefetch" href="/blog/assets/js/91.f77a782d.js"><link rel="prefetch" href="/blog/assets/js/92.ddaafe66.js"><link rel="prefetch" href="/blog/assets/js/93.e90d23d2.js"><link rel="prefetch" href="/blog/assets/js/94.afd2f55f.js"><link rel="prefetch" href="/blog/assets/js/95.3770f5bf.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.c1dd5107.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">Du-vLog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/node/" class="nav-link">
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/" class="nav-link">
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/layui/" class="nav-link">
+  layui
+</a></li><li class="dropdown-item"><!----> <a href="/blog/nginx/" class="nav-link">
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/blog/jquery/" class="nav-link">
+  jquery
+</a></li><li class="dropdown-item"><!----> <a href="/blog/npm/" class="nav-link">
+  npm
+</a></li><li class="dropdown-item"><!----> <a href="/blog/js/" class="nav-link router-link-active">
+  js
+</a></li><li class="dropdown-item"><!----> <a href="/blog/Modernizr.wiki/" class="nav-link">
+  Modernizr.wiki
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/important/" class="nav-link">
+  文档
+</a></div><div class="nav-item"><a href="http://sayfocus.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  主页
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://dujungithub.github.io/blog/" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Du GitHub Blog
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/node/" class="nav-link">
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/" class="nav-link">
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/layui/" class="nav-link">
+  layui
+</a></li><li class="dropdown-item"><!----> <a href="/blog/nginx/" class="nav-link">
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/blog/jquery/" class="nav-link">
+  jquery
+</a></li><li class="dropdown-item"><!----> <a href="/blog/npm/" class="nav-link">
+  npm
+</a></li><li class="dropdown-item"><!----> <a href="/blog/js/" class="nav-link router-link-active">
+  js
+</a></li><li class="dropdown-item"><!----> <a href="/blog/Modernizr.wiki/" class="nav-link">
+  Modernizr.wiki
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/important/" class="nav-link">
+  文档
+</a></div><div class="nav-item"><a href="http://sayfocus.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  主页
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://dujungithub.github.io/blog/" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Du GitHub Blog
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>js</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/js/Object.assign() 和 $.extend().html" class="sidebar-link">JS Object.assign() 与 Jquery $.extend()</a></li><li><a href="/blog/js/Polyfill.html" class="sidebar-link">Polyfill</a></li><li><a href="/blog/js/Polyfill 和 shim.html" class="sidebar-link">shim和polyfill</a></li><li><a href="/blog/js/Polyfill 和 shim 和 vanilla.html" class="sidebar-link">shim</a></li><li><a href="/blog/js/" aria-current="page" class="sidebar-link">/js/</a></li><li><a href="/blog/js/Symbol.html" class="sidebar-link">/js/Symbol.html</a></li><li><a href="/blog/js/export.html" class="sidebar-link">module.exports 和 import</a></li><li><a href="/blog/js/exports,module.exports和export,export default.html" class="sidebar-link">exports、module.exports 和 export、export default</a></li><li><a href="/blog/js/preload和prefetch.html" class="sidebar-link">prefetch</a></li><li><a href="/blog/js/promise.html" class="sidebar-link">/js/promise.html</a></li><li><a href="/blog/js/proxy.html" class="sidebar-link">/js/proxy.html</a></li><li><a href="/blog/js/video.html" class="sidebar-link">/js/video.html</a></li><li><a href="/blog/js/函数参数.html" class="sidebar-link">arguments</a></li><li><a href="/blog/js/函数节流与防抖.html" class="active sidebar-link">函数防抖和节流</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/js/函数节流与防抖.html#防抖-debounce" class="sidebar-link">防抖(debounce)</a></li><li class="sidebar-sub-header"><a href="/blog/js/函数节流与防抖.html#节流-throttle" class="sidebar-link">节流(throttle)</a></li></ul></li><li><a href="/blog/js/创建js文件.html" class="sidebar-link">/js/创建js文件.html</a></li><li><a href="/blog/js/前端内存泄漏.html" class="sidebar-link">前端内存泄漏</a></li><li><a href="/blog/js/堆和栈.html" class="sidebar-link">堆和栈</a></li><li><a href="/blog/js/如何封装.html" class="sidebar-link">封装</a></li><li><a href="/blog/js/待封装方法.html" class="sidebar-link">/js/待封装方法.html</a></li><li><a href="/blog/js/数据类型.html" class="sidebar-link">数据类型</a></li><li><a href="/blog/js/最快去重.html" class="sidebar-link">去重</a></li><li><a href="/blog/js/解决闭包.html" class="sidebar-link">闭包的几种实现</a></li><li><a href="/blog/js/跨域.html" class="sidebar-link">什么是跨域？</a></li><li><a href="/blog/js/边框半像素.html" class="sidebar-link">半像素</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="函数防抖和节流"><a href="#函数防抖和节流" class="header-anchor">#</a> 函数防抖和节流</h1> <blockquote><p>函数的防抖和节流在我们的工作中经常会用到,在面试中也经常会出现.因此今天我们来聊聊防抖和节流</p></blockquote> <p>首先我们来看下面这张用竖线画成的图:</p> <p><img src="/blog/assets/img/17297c9e8af91b94.826f7d13.png" alt="img"></p> <p>这其中的每一条竖线都代表着一次函数调用(如鼠标mousemove事件,input输入事件等) 正常执行的时候,调用的频率很快.但有时,我们并不需要这么高的频率去调用这个函数.假如这是一个调用后台接口的操作,那么就容易造成网络堵塞,大大的增加服务器的压力 函数防抖的时候,每次调用事件都是在正常执行暂停后一段时间(等你歇菜了我再上) 函数节流的时候,则是每隔一定的时间间隔就触发一次(管你频率那么快,我就保持自己的节奏) 现在我们大致明白函数的防抖和节流是怎么一回事了,接下来我们就来具体的学习下它们</p> <h2 id="防抖-debounce"><a href="#防抖-debounce" class="header-anchor">#</a> 防抖(debounce)</h2> <h3 id="概念"><a href="#概念" class="header-anchor">#</a> 概念</h3> <p>在任务频繁触发的情况下,一个事件在被触发的一段时间后再执行回调,假如在这段时间内又被触发了,则重新开始计时.</p> <h3 id="应用场景"><a href="#应用场景" class="header-anchor">#</a> 应用场景</h3> <p>防抖在我们的日常生活中,也是随处可见.就比如我们平时坐电梯的时候,总是要等到没有人进来了再一小会儿的工夫,电梯门才会关上.而在项目中,防抖的应用场景也是挺多的.当我们在一个搜索框输入内容进行远程搜索的时候,往往就是在我们停下输入的一小刻时间后.前台向服务器发起了请求来获得匹配的结果.我们甚至于可以将防抖的过程,看成一个英雄在技能读条,只有技能读条结束了,技能才能扔出来.要是中途被人打断了,那么下次又要重新读条了.</p> <h3 id="简易版"><a href="#简易版" class="header-anchor">#</a> 简易版</h3> <div class="language- extra-class"><pre class="language-text"><code>&lt;input id=&quot;ipt1&quot; /&gt;
+复制代码
+</code></pre></div><p>我们先来看下没有防抖的效果:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> ipt1 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#ipt1'</span><span class="token punctuation">)</span>
+ipt1<span class="token punctuation">.</span><span class="token function-variable function">onkeydown</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+复制代码
+</code></pre></div><p>再来看一下加了防抖效果的代码</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> ipt1 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#ipt1'</span><span class="token punctuation">)</span>
+<span class="token keyword">let</span> timer <span class="token operator">=</span> <span class="token keyword">null</span>
+ipt1<span class="token punctuation">.</span><span class="token function-variable function">onkeydown</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">clearTimeout</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span>
+    timer <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">500</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+复制代码
+</code></pre></div><p>大家可以将代码copy到编辑器中运行一下看看效果,是不是加了防抖效果的用户体验会更好</p> <h3 id="函数版"><a href="#函数版" class="header-anchor">#</a> 函数版</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">&quot;div1&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+复制代码
+#div1 <span class="token punctuation">{</span>
+  height<span class="token operator">:</span> <span class="token number">300</span>px<span class="token punctuation">;</span>
+  background<span class="token operator">-</span>color<span class="token operator">:</span> orange<span class="token punctuation">;</span>
+  overflow<span class="token operator">:</span> auto<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+复制代码
+<span class="token keyword">let</span> div1 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#div1'</span><span class="token punctuation">)</span>
+<span class="token keyword">function</span> <span class="token function">move</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>innerText <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>e<span class="token punctuation">.</span>offsetX<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">,</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>e<span class="token punctuation">.</span>offsetY<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">debounce</span><span class="token punctuation">(</span><span class="token parameter">fn<span class="token punctuation">,</span> wait</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">let</span> timer <span class="token operator">=</span> <span class="token keyword">null</span>
+  <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">let</span> args <span class="token operator">=</span> arguments
+    <span class="token function">clearTimeout</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span>
+    timer <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> args<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> wait<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> debounceMove <span class="token operator">=</span> <span class="token function">debounce</span><span class="token punctuation">(</span>move<span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">)</span>
+div1<span class="token punctuation">.</span>onmousemove <span class="token operator">=</span> debounceMove
+复制代码
+</code></pre></div><p>其中<code>debounce</code>就是我们的核心防抖函数了</p> <h2 id="节流-throttle"><a href="#节流-throttle" class="header-anchor">#</a> 节流(throttle)</h2> <h3 id="概念-2"><a href="#概念-2" class="header-anchor">#</a> 概念</h3> <p>高频事件触发,但是在n秒内只会执行一次,会稀释函数的执行频率</p> <h3 id="应用场景-2"><a href="#应用场景-2" class="header-anchor">#</a> 应用场景</h3> <p>节流在生活中的实例,就比如看电影的时候,每秒有24帧.大概意思就是每一秒钟的电影,其实是给大家播放了24张连续的图片.帧数越高，电影看着就越流畅.但是当帧数达到一定的高度时,我们的肉眼已经是看不出区别了.而在项目当中的应用也较多,比如在滚动加载更多的时候,在监听滚动条位置的时候并不是用户每次滚动都要去监听滚动条的位置,而是例如在1s内不管滚动多少次,只监听一次滚动条的位置.假如将节流运用到游戏当中,那就相当于技能的CD,CD没到,你就是按坏了键盘,技能也放不出来.</p> <h3 id="简易版-2"><a href="#简易版-2" class="header-anchor">#</a> 简易版</h3> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>div1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+#div1 {
+    height: 200px;
+    background-color: orange;
+    overflow: auto;
+}
+
+</code></pre></div><p>我们先来看下普通的效果,可以看到控制台在疯狂输出</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> div1 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#div1'</span><span class="token punctuation">)</span>
+div1<span class="token punctuation">.</span><span class="token function-variable function">onscroll</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'我在疯狂输出'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><p>再来看下加了节流效果的,控制台每隔一段时间才会打印一次内容</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> div1 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#div1'</span><span class="token punctuation">)</span>
+<span class="token keyword">let</span> flag <span class="token operator">=</span> <span class="token boolean">true</span>
+div1<span class="token punctuation">.</span><span class="token function-variable function">onscroll</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>flag<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token boolean">false</span>
+    <span class="token punctuation">}</span>
+    flag <span class="token operator">=</span> <span class="token boolean">false</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'我在慢慢输出'</span><span class="token punctuation">)</span>
+        flag <span class="token operator">=</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">500</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h3 id="函数版-2"><a href="#函数版-2" class="header-anchor">#</a> 函数版</h3> <h4 id="定时器版本"><a href="#定时器版本" class="header-anchor">#</a> 定时器版本</h4> <p>使用定时器来达到节流的效果</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> div1 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#div1'</span><span class="token punctuation">)</span>
+<span class="token keyword">function</span> <span class="token function">move</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>innerText <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">(</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>e<span class="token punctuation">.</span>offsetX<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">, </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>e<span class="token punctuation">.</span>offsetY<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">)</span><span class="token template-punctuation string">`</span></span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">throttle</span><span class="token punctuation">(</span><span class="token parameter">fn<span class="token punctuation">,</span> wait</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">let</span> timer <span class="token operator">=</span> <span class="token keyword">null</span>
+  <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">let</span> args <span class="token operator">=</span> arguments
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>timer<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      timer <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        timer <span class="token operator">=</span> <span class="token keyword">null</span>
+        <span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> args<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span> wait<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> throttleMove <span class="token operator">=</span> <span class="token function">throttle</span><span class="token punctuation">(</span>move<span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">)</span>
+div1<span class="token punctuation">.</span>onmousemove <span class="token operator">=</span> throttleMove 
+
+</code></pre></div><h4 id="时间戳版本"><a href="#时间戳版本" class="header-anchor">#</a> 时间戳版本</h4> <p>使用时间戳来达到节流的效果</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">throttle</span><span class="token punctuation">(</span><span class="token parameter">fn<span class="token punctuation">,</span> wait</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">let</span> time <span class="token operator">=</span> <span class="token number">0</span>
+  <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">let</span> now <span class="token operator">=</span> Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">let</span> args <span class="token operator">=</span> arguments
+    <span class="token keyword">if</span><span class="token punctuation">(</span>now <span class="token operator">-</span> time <span class="token operator">&gt;</span> wait<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> args<span class="token punctuation">)</span>
+      time <span class="token operator">=</span> now
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+</code></pre></div><p>这个版本的时间戳节流当我们的鼠标移出监听区域的时候,即停止运行了.</p> <h4 id="定时器-时间戳版本"><a href="#定时器-时间戳版本" class="header-anchor">#</a> 定时器+时间戳版本</h4> <p>下面我们来个加强版本的,这个版本是结合了定时器和时间戳,在我们鼠标移出监听区域后,还会再执行一次函数</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">throttle</span><span class="token punctuation">(</span><span class="token parameter">fn<span class="token punctuation">,</span> wait</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">let</span> time <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> timer <span class="token operator">=</span> <span class="token keyword">null</span>
+  <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">let</span> now <span class="token operator">=</span> Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">let</span> args <span class="token operator">=</span> arguments
+    <span class="token keyword">if</span><span class="token punctuation">(</span>now <span class="token operator">-</span> time <span class="token operator">&gt;</span> wait<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> args<span class="token punctuation">)</span>
+      time <span class="token operator">=</span> now
+    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+      timer <span class="token operator">&amp;&amp;</span> <span class="token function">clearTimeout</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span>
+      timer <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> args<span class="token punctuation">)</span>
+        time <span class="token operator">=</span> now
+      <span class="token punctuation">}</span><span class="token punctuation">,</span> wait<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><blockquote><p><strong>总结:</strong> 防抖和节流都是为了限制函数的执行频率,以优化函数触发频率过高导致的响应速度跟不上,延迟假死或卡顿的现象</p> <ul><li>函数防抖:原理是维护一个计时器,在规定时间后执行回调.若在此期间再次触发,则重新开始计时</li> <li>函数节流:原理是判断是否达到规定时间</li></ul></blockquote></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/js/函数参数.html" class="prev">
+        arguments
+      </a></span> <span class="next"><a href="/blog/js/创建js文件.html">
+        /js/创建js文件.html
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.d88631dc.js" defer></script><script src="/blog/assets/js/2.e4956d1c.js" defer></script><script src="/blog/assets/js/13.a003a8c4.js" defer></script>
+  </body>
+</html>
